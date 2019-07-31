@@ -1,5 +1,7 @@
 BitcoinRPC
 
+    gem "bitcoin_rpc", github: "krtschmr/bitcoin_rpc"
+
 Always develop in testnet!
 
     BitcoinRPC.config.network = Rails.env.production? ? :livenet : :testnet
