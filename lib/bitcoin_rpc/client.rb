@@ -81,10 +81,7 @@ module BitcoinRPC
       request.body = params.to_json
       if debug
         p "sending request to #{uri}, method: #{method}, args: #{args}" unless Rails.env.test?
-      end
-      if Rails.env.test?
-        return "ok"
-      end
+      end  
       response = http.request(request)
 
       if response.code == "403"
